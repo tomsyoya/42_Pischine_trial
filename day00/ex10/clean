@@ -1,0 +1,5 @@
+#/bin/sh
+
+set files=`find . -type f | grep -E "\#.*|.*\#"
+
+echo $files
