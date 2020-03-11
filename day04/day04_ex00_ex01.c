@@ -11,6 +11,7 @@ int ft_iterative_factorial(int nb)
     return res;
 }
 
+// 再帰を使った書き方
 int ft_recursive_factorial(int nb)
 {
     if(nb < 0 || nb > 12) return 0;
