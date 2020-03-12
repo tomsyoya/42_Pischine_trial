@@ -33,7 +33,7 @@ int main(void)
     int i = 1;
     int x = 0;
     for(x = -11; x<15; x++){
-        i = ft_recursive_factorial(x);
+        i = ft_iterative_factorial(x);
         printf("%dの階乗：%d\n", x,i);
     }
     return 0;
