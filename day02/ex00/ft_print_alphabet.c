@@ -1,33 +1,46 @@
+#include <stdio.h>
+
 /*
 * 問題文原文：
 * Create a function that displays the alphabet in lowercase, on a single line, by
 * ascending order, starting from the letter ’a’.
-*
-* Here’s how it should be prototyped :
-* void ft_print_alphabet(void);
+* 
+* Turn-in directory : ex00/
+* Files to turn in : ft_print_alphabet.c
+* Allowed functions : ft_putchar
 * 
 * 訳文:
 * aから始まる小文字のアルファベットを昇順で １行で出力する関数を作成しなさい。
-* 
-* 実装するべき関数：
-* void ft_print_alphabet(void);
+*
+* 提出するディレクトリ:ex00/
+* 提出するファイル： ft_print_alphabet.c
+* 使用できる関数： ft_putchar
+*
 */
 
-#include <stdio.h>
+//指定された文字を標準出力
+void ft_putchar(char c){
+    putchar(c);
+}
 
-//アルファベットを出力する関数
+//a~zの文字を1行で出力する
 void ft_print_alphabet(void){
-    const int alphabet_count = 26;
+    int alphabet_count; //アルファベットの総数
+    char alphabet_char; //表示するアルファベット
+    int i; //ASCIIコードに加算するための数字
+
+    alphabet_count = 26;
+    alphabet_char = 'a';
+    i = 0;
 
     //ASCIIコードに数を加算して、アルファベットを生成する
-    char inital_char = 'a';
-    for (int i = 0; i < alphabet_count; i++){
-        printf("%c", inital_char + i);
-    }
+    while (i < alphabet_count){
+        ft_putchar(alphabet_char + i);
+        i++;
+    };
 }
 
 int main(){
-    //アルファベットを一列で出力
     ft_print_alphabet(); //実行結果：abcdefghijklmnopqrstuvwxyz
     return 0;
 }
